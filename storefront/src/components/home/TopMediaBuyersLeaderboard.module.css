@@ -1,0 +1,200 @@
+.wrapper {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Full Dense Background Cards Wallpaper Grid */
+.backgroundCardsGrid {
+  position: absolute;
+  inset: -30%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  opacity: 0.15;
+  transform: rotate(-6deg) scale(1.1);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.gridCardItem {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+}
+
+/* Figma Selection Bounding Box */
+.selectionFrame {
+  position: relative;
+  width: 100%;
+  border: 1.5px solid #2563EB;
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: 4px;
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.22);
+  cursor: pointer;
+  animation: boxSelectAnim 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: border-color, box-shadow, background-color;
+  backdrop-filter: blur(14px);
+}
+
+@keyframes boxSelectAnim {
+  0%,
+  42% {
+    border-color: rgba(37, 99, 235, 0.25);
+    background: rgba(37, 99, 235, 0.01);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.05);
+  }
+  48%,
+  88% {
+    border-color: #2563EB;
+    background: rgba(37, 99, 235, 0.06);
+    box-shadow: 0 0 35px rgba(37, 99, 235, 0.25);
+  }
+  100% {
+    border-color: rgba(37, 99, 235, 0.25);
+    background: rgba(37, 99, 235, 0.01);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.05);
+  }
+}
+
+/* 8 Anchor Square Handles */
+.handlesContainer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.handle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid #2563EB;
+  border-radius: 1.5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+/* 4 Corners */
+.tl {
+  top: 0;
+  left: 0;
+}
+.tr {
+  top: 0;
+  left: 100%;
+}
+.bl {
+  top: 100%;
+  left: 0;
+}
+.br {
+  top: 100%;
+  left: 100%;
+}
+
+/* 4 Midpoints */
+.tc {
+  top: 0;
+  left: 50%;
+}
+.bc {
+  top: 100%;
+  left: 50%;
+}
+.ml {
+  top: 50%;
+  left: 0;
+}
+.mr {
+  top: 50%;
+  left: 100%;
+}
+
+/* Smooth One-Motion Continuous Figma Cursor */
+.figmaCursor {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  display: flex;
+  align-items: flex-start;
+  pointer-events: none;
+  z-index: 20;
+  transform-origin: top left;
+  animation: cursorGlideSmooth 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes cursorGlideSmooth {
+  0% {
+    opacity: 0;
+    transform: translate3d(140px, 80px, 0);
+  }
+  15% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  /* Snappy click */
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(0.92);
+  }
+  55% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  /* Smooth continuous forward glide */
+  85% {
+    opacity: 1;
+    transform: translate3d(-180px, -70px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-240px, -90px, 0);
+  }
+}
+
+.cursorTag {
+  margin-top: 13px;
+  margin-left: -4px;
+  background: #2563EB;
+  color: #FFFFFF;
+  padding: 2.5px 7px;
+  border-radius: 4px 6px 6px 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+  font-family: inherit;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 1024px) {
+  .backgroundCardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .backgroundCardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    opacity: 0.12;
+  }
+}

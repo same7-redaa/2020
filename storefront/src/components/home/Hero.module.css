@@ -1,0 +1,200 @@
+.button {
+  height: 52px;
+  min-width: 180px;
+  max-width: 100%;
+  padding: 0 28px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .button {
+    min-width: 0;
+    width: 100%;
+    max-width: 280px;
+    height: 48px;
+    padding: 0 18px;
+  }
+}
+
+.btnTxt {
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: color 0.4s ease-in-out;
+}
+
+/* Primary Hero Button: #FF8B2C Glow */
+.btnPrimary {
+  border: 2px solid #FF8B2C;
+  background-color: #FF8B2C;
+  color: #060608;
+  box-shadow: 0 4px 25px rgba(255, 139, 44, 0.45);
+}
+
+.btnPrimary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #FFA857;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: 1;
+}
+
+.btnPrimary:hover {
+  box-shadow: 0 6px 35px rgba(255, 139, 44, 0.65);
+  color: #060608;
+  border-color: #FFA857;
+}
+
+.btnPrimary:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+/* Secondary Hero Button: Glass Outline */
+.btnSecondary {
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btnSecondary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 139, 44, 0.15);
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: 1;
+}
+
+.btnSecondary:hover {
+  box-shadow: 0 6px 25px rgba(255, 139, 44, 0.25);
+  color: #FF8B2C;
+  border-color: rgba(255, 139, 44, 0.6);
+}
+
+.btnSecondary:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+@keyframes floatSlow1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+
+@keyframes floatSlow2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(7px) rotate(-3deg); }
+}
+
+@keyframes floatSlow3 {
+  0%, 100% { transform: translateX(0px) translateY(0px); }
+  50% { transform: translateX(4px) translateY(-6px); }
+}
+
+.float1 {
+  animation: floatSlow1 4s ease-in-out infinite;
+}
+
+.float2 {
+  animation: floatSlow2 4.6s ease-in-out infinite 0.6s;
+}
+
+.float3 {
+  animation: floatSlow3 5.2s ease-in-out infinite 1.2s;
+}
+
+.orbitTrack {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 5;
+  animation: spinOrbit 26s linear infinite;
+  transition: opacity 0.8s ease-out;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.orbitTrack:hover,
+.orbitTrack:hover .iconBadge {
+  animation-play-state: paused;
+}
+
+@keyframes spinOrbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes counterSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.radialItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: auto;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.iconBadge {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  cursor: pointer;
+  animation: counterSpin 26s linear infinite;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.iconBadge:hover {
+  transform: scale(1.35) !important;
+  filter: drop-shadow(0 0 18px rgba(255, 139, 44, 0.95)) !important;
+  z-index: 50;
+}
+
+
+

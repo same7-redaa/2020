@@ -1,0 +1,97 @@
+.flipCard {
+  background-color: transparent;
+  width: 100%;
+  height: 310px;
+  perspective: 1000px;
+  font-family: 'Thmanyah Serif Text', sans-serif;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .flipCard {
+    height: 320px;
+  }
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flipCard:hover .flipCardInner,
+.flipCard.flipped .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Front Face */
+.flipCardFront {
+  background: radial-gradient(circle at 50% 0%, #151520 0%, #0a0a0f 100%);
+  border: 1.5px solid rgba(255, 139, 44, 0.3);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(255, 139, 44, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.flipCardFront::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF8B2C, transparent);
+  box-shadow: 0 0 12px #FF8B2C;
+}
+
+.flipCard:hover .flipCardFront {
+  border-color: rgba(255, 139, 44, 0.6);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(255, 139, 44, 0.2);
+}
+
+/* Back Face */
+.flipCardBack {
+  background: radial-gradient(circle at 50% 100%, #181824 0%, #0c0c12 100%);
+  border: 1.5px solid #FF8B2C;
+  transform: rotateY(180deg);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.9),
+    0 0 35px rgba(255, 139, 44, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.flipCardBack::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFA857, transparent);
+  box-shadow: 0 0 15px #FF8B2C;
+}

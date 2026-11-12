@@ -1,0 +1,10 @@
+{
+  "name": "ibra-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix storefront run dev",
+    "build": "npm --prefix storefront run build",
+    "start": "npm --prefix storefront run start"
+  }
+}

@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Thmanyah Serif Text';
+  src: url('/fonts/thmanyah-serif-text-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Thmanyah Serif Text';
+  src: url('/fonts/thmanyah-serif-text-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Thmanyah Serif Text';
+  src: url('/fonts/thmanyah-serif-text-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Thmanyah Serif Text';
+  src: url('/fonts/thmanyah-serif-text-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Thmanyah Serif Display';
+  src: url('/fonts/thmanyah-serif-display-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Thmanyah Serif Display';
+  src: url('/fonts/thmanyah-serif-display-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Thmanyah Serif Display';
+  src: url('/fonts/thmanyah-serif-display-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+/* LTR / English Typography */
+html[lang="en"] body,
+html[dir="ltr"] body,
+[dir="ltr"] {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+html[lang="en"] .font-serif,
+html[dir="ltr"] .font-serif,
+html[lang="en"] .font-display,
+html[dir="ltr"] .font-display {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+html {
+  scroll-padding-top: 85px;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060608;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 139, 44, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8B2C;
+}
+
+:root {
+  --background: #060608;
+  --foreground: #ffffff;
+  --color-neon-lime: #FF8B2C;
+  --color-honey-gold: #FF8B2C;
+  --color-honey-light: #FFA959;
+  --color-deep-black: #060608;
+  --color-soft-gray: #121218;
+  --color-purple-accent: #1e140d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-neon-lime: var(--color-neon-lime);
+  --color-honey-gold: var(--color-honey-gold);
+  --color-honey-light: var(--color-honey-light);
+  --color-deep-black: var(--color-deep-black);
+  --color-soft-gray: var(--color-soft-gray);
+  --color-purple-accent: var(--color-purple-accent);
+  --font-thmanyah: 'Thmanyah Serif Text', serif;
+  --font-display: 'Thmanyah Serif Display', serif;
+  --animate-slide-right: slide-right 50s linear infinite;
+  --animate-slide-left: slide-left 50s linear infinite;
+}
+
+@keyframes slide-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(33.3333%); }
+}
+
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
+}
+
+@keyframes tickerMoveLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+.animate-ticker-left {
+  animation: tickerMoveLeft 32s linear infinite;
+  will-change: transform;
+}
+
+@keyframes tickerMoveRight {
+  0% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-ticker-right {
+  animation: tickerMoveRight 32s linear infinite;
+  will-change: transform;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(120%) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes toastProgress {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-toast-progress {
+  animation: toastProgress linear forwards;
+}
+
+@keyframes loaderProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+*, ::before, ::after {
+  font-family: var(--font-display), var(--font-thmanyah), serif;
+  font-feature-settings: "kern" 1, "liga" 1, "rlig" 1, "calt" 1;
+  font-variant-ligatures: contextual common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-display), var(--font-thmanyah), serif;
+  overflow-x: hidden;
+}
+
+button, input, select, textarea, a, p, span, div, label {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, .heading, .font-display {
+  font-family: var(--font-display), serif;
+  font-feature-settings: "kern" 1, "liga" 1, "rlig" 1, "calt" 1;
+  font-variant-ligatures: contextual common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+/* Pause infinite animations while their section is off-screen (usePauseOffscreen) */
+[data-offscreen="true"],
+[data-offscreen="true"] * {
+  animation-play-state: paused !important;
+}
+
+/* Atmospheric Glowing Ambient Gradient Backdrop with Hardware-Accelerated Compositor Layer */
+.ambient-glow-bg {
+  background-color: #060608;
+  position: relative;
+}
+
+.ambient-glow-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 139, 44, 0.18), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(255, 139, 44, 0.10), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 10% 70%, rgba(255, 139, 44, 0.08), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 110%, rgba(255, 139, 44, 0.14), transparent 70%);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(14, 14, 19, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 139, 44, 0.18);
+  box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.65), inset 0 1px 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(18, 18, 24, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 139, 44, 0.45);
+  box-shadow: 0 16px 40px -4px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 139, 44, 0.15), inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-pill {
+  background: rgba(255, 139, 44, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 139, 44, 0.25);
+}

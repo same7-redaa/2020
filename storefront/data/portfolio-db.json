@@ -1,0 +1,212 @@
+{
+  "media-buying": [
+    {
+      "id": "gp-1",
+      "title": "حملة التوسع الموسمي لمستلزمات المنزل وتحقيق أعلى ROAS",
+      "category": "الميديا باينج",
+      "image": "/portfolio/project-6.jpg"
+    },
+    {
+      "id": "gp-2",
+      "title": "إطلاق حملة إكسسوارات وساعات رجالية بمعدل تحويل قياسي",
+      "category": "الميديا باينج",
+      "image": "/portfolio/project-2.jpg"
+    },
+    {
+      "id": "gp-3",
+      "title": "حملة استهداف أزياء وملابس الصيف بـ ROAS 13.4x",
+      "category": "الميديا باينج",
+      "image": "/portfolio/2a9b34945a84d3883bef59ee57fb0121.jpg"
+    },
+    {
+      "id": "gp-4",
+      "title": "إعادة استهداف ذكية لمنتجات العناية وتخفيض الـ CPP 74%",
+      "category": "الميديا باينج",
+      "image": "/portfolio/project-1.jpg"
+    }
+  ],
+  "motion-video": [
+    {
+      "id": "gp-motion-1",
+      "title": "إعلان موشن جرافيك ثلاثي الأبعاد لتطبيق توصيل سريع",
+      "category": "الموشن جرافيك",
+      "image": "/portfolio/project-4.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "gp-motion-2",
+      "title": "فيديو إعلاني سينمائي وإبراز تفاصيل عطور فاخرة",
+      "category": "الموشن جرافيك",
+      "image": "/portfolio/project-5.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "gp-motion-3",
+      "title": "ريلز حركي سريع لمنتجات العناية بالبشرة والمكياج",
+      "category": "الموشن جرافيك",
+      "image": "/portfolio/8d26727dd84afc3d2d99da81126bdcfe.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "gp-motion-4",
+      "title": "موشن جرافيك تفاعلي لمنصة دورات تعليمية وتدريب",
+      "category": "الموشن جرافيك",
+      "image": "/portfolio/5a0180169cf5c10d6ae9a4f883938f81.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ],
+  "social-designs": [
+    {
+      "id": "gp-design-1",
+      "title": "مجموعة بوستات إعلانية لبراند أحذية رياضية",
+      "category": "تصاميم السوشيال ميديا",
+      "image": "/portfolio/project-3.jpg"
+    },
+    {
+      "id": "gp-design-2",
+      "title": "هوية بصرية كاملة لشركة استشارات وحلول أعمال",
+      "category": "تصاميم السوشيال ميديا",
+      "image": "/portfolio/project-1.jpg"
+    },
+    {
+      "id": "gp-design-3",
+      "title": "سلسلة بوستات سوشيال ميديا لمطعم مأكولات راقية",
+      "category": "تصاميم السوشيال ميديا",
+      "image": "/portfolio/0eb69c9aba3b9e587f00ebb3976d7cb1.jpg"
+    },
+    {
+      "id": "gp-design-4",
+      "title": "بانرات وتصاميم عروض الجمعة البيضاء والحملات الكبرى",
+      "category": "تصاميم السوشيال ميديا",
+      "image": "/portfolio/project-6.jpg"
+    }
+  ],
+  "ecommerce-scaling": [
+    {
+      "id": "gp-shopify-1",
+      "title": "بناء وتوسيع متجر ساعات وإكسسوارات فاخرة على Shopify",
+      "category": "توسيع المتاجر",
+      "platform": "shopify",
+      "platformName": "شوبيفاي (Shopify)",
+      "storeName": "متجر رويال كرونو (Royal Chrono)",
+      "salesGrowth": "+320% نمو المبيعات",
+      "conversionRate": "4.6% معدل التحويل",
+      "ordersCount": "+3,850 طلب",
+      "niche": "ساعات وإكسسوارات فاخرة",
+      "image": "/portfolio/project-2.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-shopify-2",
+      "title": "متجر أجهزة وإلكترونيات ذكية وتوسيع الـ AOV على Shopify",
+      "category": "توسيع المتاجر",
+      "platform": "shopify",
+      "platformName": "شوبيفاي (Shopify)",
+      "storeName": "متجر نيكست جين تك (NextGen Tech)",
+      "salesGrowth": "+280% زيادة المبيعات",
+      "conversionRate": "5.2% معدل التحويل",
+      "ordersCount": "+5,100 طلب",
+      "niche": "أجهزة ذكية وإلكترونيات",
+      "image": "/portfolio/project-4.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-shopify-3",
+      "title": "متجر ملابس وأزياء عصرية بتجربة شراء سريعة على Shopify",
+      "category": "توسيع المتاجر",
+      "platform": "shopify",
+      "platformName": "شوبيفاي (Shopify)",
+      "storeName": "براند إليجانت مودا (Elegant Moda)",
+      "salesGrowth": "+410% مضاعفة الأرباح",
+      "conversionRate": "4.9% معدل التحويل",
+      "ordersCount": "+6,400 طلب",
+      "niche": "أزياء وملابس عصرية",
+      "image": "/portfolio/project-6.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-easy-1",
+      "title": "صفحة هبوط إيزي أوردرز بنظام الطلب السريع لمنتجات العناية",
+      "category": "توسيع المتاجر",
+      "platform": "easy-orders",
+      "platformName": "إيزي أوردرز (Easy Orders)",
+      "storeName": "لاندنج بيج بيور كير (PureCare)",
+      "salesGrowth": "+350% نمو المبيعات",
+      "conversionRate": "6.8% معدل التحويل",
+      "ordersCount": "+4,900 طلب",
+      "niche": "منتجات العناية بالبشرة",
+      "image": "/portfolio/project-1.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-easy-2",
+      "title": "هندسة صفحة هبوط ذات تحويل قياسي لمنتجات اللياقة بـ Easy Orders",
+      "category": "توسيع المتاجر",
+      "platform": "easy-orders",
+      "platformName": "إيزي أوردرز (Easy Orders)",
+      "storeName": "صفحة فيت برو ماكس (FitPro Max)",
+      "salesGrowth": "+290% زيادة المبيعات",
+      "conversionRate": "6.1% معدل التحويل",
+      "ordersCount": "+3,700 طلب",
+      "niche": "معدات وأدوات اللياقة",
+      "image": "/portfolio/a6d2c954f419aa7199d41d1bdf61f9de.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-easy-3",
+      "title": "صفحة بيع بضغطة واحدة لأدوات المطبخ والمنزل بـ Easy Orders",
+      "category": "توسيع المتاجر",
+      "platform": "easy-orders",
+      "platformName": "إيزي أوردرز (Easy Orders)",
+      "storeName": "صفحة كيتشن تك (KitchenTech)",
+      "salesGrowth": "+380% مضاعفة المبيعات",
+      "conversionRate": "5.7% معدل التحويل",
+      "ordersCount": "+5,800 طلب",
+      "niche": "أدوات منزلية ومطبخ",
+      "image": "/portfolio/project-3.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-vondera-1",
+      "title": "إطلاق وتوسيع متجر منتجات جلدية طبيعية على منصة Vondera",
+      "category": "توسيع المتاجر",
+      "platform": "vondera",
+      "platformName": "فونديرا (Vondera)",
+      "storeName": "متجر كرافت ليزر (Craft Leather)",
+      "salesGrowth": "+340% نمو المبيعات",
+      "conversionRate": "4.5% معدل التحويل",
+      "ordersCount": "+3,400 طلب",
+      "niche": "مصنوعات جلدية طبيعية",
+      "image": "/portfolio/2a9b34945a84d3883bef59ee57fb0121.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-vondera-2",
+      "title": "متجر مستحضرات تجميل ومكملات غذائية على Vondera",
+      "category": "توسيع المتاجر",
+      "platform": "vondera",
+      "platformName": "فونديرا (Vondera)",
+      "storeName": "متجر ناتشورال جلو (Natural Glow)",
+      "salesGrowth": "+310% زيادة المبيعات",
+      "conversionRate": "5.0% معدل التحويل",
+      "ordersCount": "+4,150 طلب",
+      "niche": "مستحضرات تجميل ومكملات",
+      "image": "/portfolio/project-5.jpg",
+      "storeUrl": "https://example.com"
+    },
+    {
+      "id": "gp-vondera-3",
+      "title": "تحسين تجربة الشراء ومسار الدفع لمتجر إكسسوارات على Vondera",
+      "category": "توسيع المتاجر",
+      "platform": "vondera",
+      "platformName": "فونديرا (Vondera)",
+      "storeName": "متجر أورا لاين (Aura Line)",
+      "salesGrowth": "+270% نمو المبيعات",
+      "conversionRate": "4.7% معدل التحويل",
+      "ordersCount": "+2,900 طلب",
+      "niche": "إكسسوارات وهدايا راقية",
+      "image": "/portfolio/8d26727dd84afc3d2d99da81126bdcfe.jpg",
+      "storeUrl": "https://example.com"
+    }
+  ]
+}
